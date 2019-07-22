@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MSN</title>
+    <meta name="description" content="My Social Network">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>
+      <a href="/">My Social Network</a>
+    </h1>
+      <nav>
+        {% if current_user.is_authenticated %}
+          <div><span>{{ current_user.email }}</span>
+        </div>
+        {% endif %}
+    </nav>
+      {% block content %}
+      {% endblock content %}
+  </body>
+</html>
+
